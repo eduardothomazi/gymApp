@@ -1,24 +1,34 @@
- import { ReactComponent as Logo } from "assets/images/gym-logo.svg"
- 
- function LandingPage(){
-    return(
-            <header className="landing-page">
-                <div className="header-logo">
-                    <Logo/>
-                </div>
-                <div className="header-customers-links">
-                    <a href="http://google.com">A academia</a>
-                    <a href="http://google.com">Modalidades</a>
-                    <a href="http://google.com">Horários</a>
-                    <a href="http://google.com">Blog</a>
-                    <a href="http://google.com">Panos</a>
-                </div>
+import { ReactComponent as Logo } from "/home/eduardo2/Documents/projetos/GymApp/frontend/src/assets/images/gym-logo.svg"
+import { ReactComponent as FacebookLogo } from "/home/eduardo2/Documents/projetos/GymApp/frontend/src/assets/images/fb-logo.svg"
+import { ReactComponent as InstagramLogo } from "/home/eduardo2/Documents/projetos/GymApp/frontend/src/assets/images/ig-logo.svg"
+import { ReactComponent as TikTokLogo } from "/home/eduardo2/Documents/projetos/GymApp/frontend/src/assets/images/tt-logo.svg"
+
+
+
+function Header() {
+    return (
+        <header className="page-header">
+            <a className="header-logo-link" href="/"><Logo></Logo></a>
+            <div className="header-customers-links">
+                <a className="link-academia" href="/academia">A academia</a>
+                <a className="link-modalidades" href="/modalidades">Modalidades</a>
+                <a className="link-horarios" href="horarios">Horários</a>
+                <a className="link-blog" href="blog">Blog</a>
+                <a className="link-planos" href="/planos">Panos</a>
+            </div>
+            <div className="node-header-social-media-links">
                 <div className="header-login-links">
-                    <a href="http://google.com">login</a>
-                    <a href="http://google.com">cadastrar</a>
+                    <a className="link-login" href="/login-page">login</a>
+                    <a className="link-sign" href="/sign-page">cadastrar</a>
                 </div>
-            </header>
-        
+                <div className="header-social-media-links">
+                    <a className="ink-facebook" href="https://facebook.com"><FacebookLogo /></a>
+                    <a className="ink-instagram" href="https://instagram.com"><InstagramLogo /></a>
+                    <a className="ink-tiktok" href="https://tiktok.com"><TikTokLogo /></a>
+                </div>
+            </div>
+        </header>
+
     )
- }
- export default LandingPage
+}
+export default Header
